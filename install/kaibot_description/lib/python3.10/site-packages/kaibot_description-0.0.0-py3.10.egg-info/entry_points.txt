@@ -1,0 +1,2 @@
+[console_scripts]
+move_control = kaibot_description.move_control:main

@@ -1,0 +1,42 @@
+[1.080s] Invoking command in '/home/ctk/kaibot_ws/src/xiaokaibot_nav2': PYTHONPATH=/home/ctk/kaibot_ws/build/xiaokaibot_nav2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/xiaokaibot_nav2 build --build-base /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build install --record /home/ctk/kaibot_ws/build/xiaokaibot_nav2/install.log --single-version-externally-managed install_data
+[1.287s] running egg_info
+[1.287s] creating ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info
+[1.301s] writing ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/PKG-INFO
+[1.302s] writing dependency_links to ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/dependency_links.txt
+[1.302s] writing requirements to ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/requires.txt
+[1.302s] writing top-level names to ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/top_level.txt
+[1.302s] writing manifest file '../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/SOURCES.txt'
+[1.334s] reading manifest file '../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/SOURCES.txt'
+[1.334s] writing manifest file '../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/SOURCES.txt'
+[1.334s] running build
+[1.335s] running build_py
+[1.335s] creating /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build
+[1.335s] creating /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib
+[1.335s] creating /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib/xiaokaibot_nav2
+[1.335s] copying xiaokaibot_nav2/__init__.py -> /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib/xiaokaibot_nav2
+[1.335s] running install
+[1.340s] running install_lib
+[1.353s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2
+[1.353s] copying /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib/xiaokaibot_nav2/__init__.py -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2
+[1.354s] byte-compiling /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2/__init__.py to __init__.cpython-310.pyc
+[1.355s] running install_data
+[1.355s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index
+[1.355s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index/resource_index
+[1.355s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index/resource_index/packages
+[1.355s] copying resource/xiaokaibot_nav2 -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index/resource_index/packages
+[1.355s] copying package.xml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2
+[1.355s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/launch
+[1.355s] copying launch/xiaokaibot_nav2.launch.py -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/launch
+[1.356s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+[1.356s] copying maps/my_slam_box3.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+[1.356s] copying maps/my_slam_box.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+[1.356s] copying maps/my_slam_box2.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+[1.356s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/params
+[1.356s] copying params/nav2_params.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/params
+[1.356s] creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/rviz
+[1.356s] copying rviz/nav2_default_view.rviz -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/rviz
+[1.356s] running install_egg_info
+[1.370s] Copying ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info to /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2-0.0.0-py3.10.egg-info
+[1.371s] running install_scripts
+[1.483s] writing list of installed files to '/home/ctk/kaibot_ws/build/xiaokaibot_nav2/install.log'
+[1.572s] Invoked command in '/home/ctk/kaibot_ws/src/xiaokaibot_nav2' returned '0': PYTHONPATH=/home/ctk/kaibot_ws/build/xiaokaibot_nav2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/xiaokaibot_nav2 build --build-base /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build install --record /home/ctk/kaibot_ws/build/xiaokaibot_nav2/install.log --single-version-externally-managed install_data

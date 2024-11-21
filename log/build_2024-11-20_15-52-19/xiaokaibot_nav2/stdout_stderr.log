@@ -1,0 +1,40 @@
+running egg_info
+creating ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info
+writing ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/PKG-INFO
+writing dependency_links to ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/dependency_links.txt
+writing requirements to ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/requires.txt
+writing top-level names to ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/top_level.txt
+writing manifest file '../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/SOURCES.txt'
+reading manifest file '../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/SOURCES.txt'
+writing manifest file '../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build
+creating /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib
+creating /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib/xiaokaibot_nav2
+copying xiaokaibot_nav2/__init__.py -> /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib/xiaokaibot_nav2
+running install
+running install_lib
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2
+copying /home/ctk/kaibot_ws/build/xiaokaibot_nav2/build/lib/xiaokaibot_nav2/__init__.py -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2
+byte-compiling /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index/resource_index
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index/resource_index/packages
+copying resource/xiaokaibot_nav2 -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/ament_index/resource_index/packages
+copying package.xml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/launch
+copying launch/xiaokaibot_nav2.launch.py -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/launch
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+copying maps/my_slam_box3.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+copying maps/my_slam_box.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+copying maps/my_slam_box2.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/maps
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/params
+copying params/nav2_params.yaml -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/params
+creating /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/rviz
+copying rviz/nav2_default_view.rviz -> /home/ctk/kaibot_ws/install/xiaokaibot_nav2/share/xiaokaibot_nav2/rviz
+running install_egg_info
+Copying ../../build/xiaokaibot_nav2/xiaokaibot_nav2.egg-info to /home/ctk/kaibot_ws/install/xiaokaibot_nav2/lib/python3.10/site-packages/xiaokaibot_nav2-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/ctk/kaibot_ws/build/xiaokaibot_nav2/install.log'

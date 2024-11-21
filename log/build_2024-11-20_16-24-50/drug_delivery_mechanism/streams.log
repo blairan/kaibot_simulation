@@ -1,0 +1,27 @@
+[2.315s] Invoking command in '/home/ctk/kaibot_ws/src/drug_delivery_mechanism': PYTHONPATH=/home/ctk/kaibot_ws/build/drug_delivery_mechanism/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ctk/kaibot_ws/install/drug_delivery_mechanism/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drug_delivery_mechanism build --build-base /home/ctk/kaibot_ws/build/drug_delivery_mechanism/build install --record /home/ctk/kaibot_ws/build/drug_delivery_mechanism/install.log --single-version-externally-managed install_data
+[2.742s] running egg_info
+[2.773s] writing ../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info/PKG-INFO
+[2.774s] writing dependency_links to ../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info/dependency_links.txt
+[2.774s] writing entry points to ../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info/entry_points.txt
+[2.775s] writing requirements to ../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info/requires.txt
+[2.775s] writing top-level names to ../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info/top_level.txt
+[2.837s] reading manifest file '../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info/SOURCES.txt'
+[2.840s] writing manifest file '../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info/SOURCES.txt'
+[2.840s] running build
+[2.840s] running build_py
+[2.841s] copying drug_delivery_mechanism/drug_delivery_node.py -> /home/ctk/kaibot_ws/build/drug_delivery_mechanism/build/lib/drug_delivery_mechanism
+[2.846s] copying drug_delivery_mechanism/__init__.py -> /home/ctk/kaibot_ws/build/drug_delivery_mechanism/build/lib/drug_delivery_mechanism
+[2.846s] running install
+[2.859s] running install_lib
+[2.901s] copying /home/ctk/kaibot_ws/build/drug_delivery_mechanism/build/lib/drug_delivery_mechanism/drug_delivery_node.py -> /home/ctk/kaibot_ws/install/drug_delivery_mechanism/lib/python3.10/site-packages/drug_delivery_mechanism
+[2.902s] byte-compiling /home/ctk/kaibot_ws/install/drug_delivery_mechanism/lib/python3.10/site-packages/drug_delivery_mechanism/drug_delivery_node.py to drug_delivery_node.cpython-310.pyc
+[2.911s] running install_data
+[2.911s] copying resource/drug_delivery_mechanism -> /home/ctk/kaibot_ws/install/drug_delivery_mechanism/share/ament_index/resource_index/packages
+[2.911s] copying package.xml -> /home/ctk/kaibot_ws/install/drug_delivery_mechanism/share/drug_delivery_mechanism
+[2.912s] running install_egg_info
+[2.951s] removing '/home/ctk/kaibot_ws/install/drug_delivery_mechanism/lib/python3.10/site-packages/drug_delivery_mechanism-0.0.0-py3.10.egg-info' (and everything under it)
+[2.952s] Copying ../../build/drug_delivery_mechanism/drug_delivery_mechanism.egg-info to /home/ctk/kaibot_ws/install/drug_delivery_mechanism/lib/python3.10/site-packages/drug_delivery_mechanism-0.0.0-py3.10.egg-info
+[2.953s] running install_scripts
+[3.286s] Installing drug_delivery_node script to /home/ctk/kaibot_ws/install/drug_delivery_mechanism/lib/drug_delivery_mechanism
+[3.286s] writing list of installed files to '/home/ctk/kaibot_ws/build/drug_delivery_mechanism/install.log'
+[3.415s] Invoked command in '/home/ctk/kaibot_ws/src/drug_delivery_mechanism' returned '0': PYTHONPATH=/home/ctk/kaibot_ws/build/drug_delivery_mechanism/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ctk/kaibot_ws/install/drug_delivery_mechanism/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/drug_delivery_mechanism build --build-base /home/ctk/kaibot_ws/build/drug_delivery_mechanism/build install --record /home/ctk/kaibot_ws/build/drug_delivery_mechanism/install.log --single-version-externally-managed install_data

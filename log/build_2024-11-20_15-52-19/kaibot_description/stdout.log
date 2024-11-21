@@ -1,0 +1,49 @@
+running egg_info
+creating ../../build/kaibot_description/kaibot_description.egg-info
+writing ../../build/kaibot_description/kaibot_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/kaibot_description/kaibot_description.egg-info/dependency_links.txt
+writing entry points to ../../build/kaibot_description/kaibot_description.egg-info/entry_points.txt
+writing requirements to ../../build/kaibot_description/kaibot_description.egg-info/requires.txt
+writing top-level names to ../../build/kaibot_description/kaibot_description.egg-info/top_level.txt
+writing manifest file '../../build/kaibot_description/kaibot_description.egg-info/SOURCES.txt'
+reading manifest file '../../build/kaibot_description/kaibot_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/kaibot_description/kaibot_description.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ctk/kaibot_ws/build/kaibot_description/build
+creating /home/ctk/kaibot_ws/build/kaibot_description/build/lib
+creating /home/ctk/kaibot_ws/build/kaibot_description/build/lib/kaibot_description
+copying kaibot_description/move_control.py -> /home/ctk/kaibot_ws/build/kaibot_description/build/lib/kaibot_description
+copying kaibot_description/__init__.py -> /home/ctk/kaibot_ws/build/kaibot_description/build/lib/kaibot_description
+running install
+running install_lib
+creating /home/ctk/kaibot_ws/install/kaibot_description/lib/python3.10/site-packages/kaibot_description
+copying /home/ctk/kaibot_ws/build/kaibot_description/build/lib/kaibot_description/move_control.py -> /home/ctk/kaibot_ws/install/kaibot_description/lib/python3.10/site-packages/kaibot_description
+copying /home/ctk/kaibot_ws/build/kaibot_description/build/lib/kaibot_description/__init__.py -> /home/ctk/kaibot_ws/install/kaibot_description/lib/python3.10/site-packages/kaibot_description
+byte-compiling /home/ctk/kaibot_ws/install/kaibot_description/lib/python3.10/site-packages/kaibot_description/move_control.py to move_control.cpython-310.pyc
+byte-compiling /home/ctk/kaibot_ws/install/kaibot_description/lib/python3.10/site-packages/kaibot_description/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/ament_index
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/ament_index/resource_index
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/ament_index/resource_index/packages
+copying resource/kaibot_description -> /home/ctk/kaibot_ws/install/kaibot_description/share/ament_index/resource_index/packages
+copying package.xml -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/launch
+copying launch/bringup_gz_nav2.launch.py -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/launch
+copying launch/bringup_description.launch.py -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/launch
+copying launch/bringup_gazebo.launch.py -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/launch
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/urdf
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/urdf/xacro
+copying urdf/xiao_kai_robot.urdf -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/urdf
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/rviz
+copying rviz/xiao_kai_robot_base_conf.rviz -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/rviz
+creating /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/world
+copying world/chinic_multi.world -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/world
+copying world/chinic.world -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/world
+copying world/norsing_home.world -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/world
+copying world/chinic_multi2.world -> /home/ctk/kaibot_ws/install/kaibot_description/share/kaibot_description/world
+running install_egg_info
+Copying ../../build/kaibot_description/kaibot_description.egg-info to /home/ctk/kaibot_ws/install/kaibot_description/lib/python3.10/site-packages/kaibot_description-0.0.0-py3.10.egg-info
+running install_scripts
+Installing move_control script to /home/ctk/kaibot_ws/install/kaibot_description/lib/kaibot_description
+writing list of installed files to '/home/ctk/kaibot_ws/build/kaibot_description/install.log'

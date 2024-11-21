@@ -1,0 +1,2 @@
+[console_scripts]
+drug_delivery_node = drug_delivery_mechanism.drug_delivery_node:main

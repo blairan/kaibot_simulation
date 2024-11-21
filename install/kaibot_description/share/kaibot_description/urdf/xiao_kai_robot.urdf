@@ -1,0 +1,431 @@
+<!--
+长 0.65m
+宽 0.4m
+高 0.6m
+车轮半径：0.13m
+车轮厚度：0.11m
+離地間距：(0.7m/2)+0.13=0.48
+-->
+<robot name="xaio_kai_robot">
+    <material name="yellow">
+        <color rgba="0.7 0.7 0 0.95" />
+    </material>
+
+    <material name="gray">
+        <color rgba="0.2 0.2 0.2 1.0" />
+    </material>
+
+    <material name="radar_material">
+        <color rgba="0.1 0.1 0.1 1.0" />
+    </material>
+
+    <material name="camera_material">
+        <color rgba="0.1 0.3 0.8 1.0" />
+    </material>
+
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <origin xyz="0 0 0.35" rpy="0 0 0"/>
+    </joint>
+
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.65 0.4 0.6"/>
+            </geometry>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.65 0.4 0.6"/> 
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Yellow</material>
+    </gazebo>
+
+    <!-- ==============車輪================= -->
+    <!-- 左前輪 -->
+    <link name="front_left_wheel">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.5"/>  <!-- 體積增大，質量也增加 -->
+            <inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.004"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="front_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="front_left_wheel_joint" type="continuous">
+        <origin xyz="0.18 0.2 -0.23" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_left_wheel"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    
+    <!-- 右前輪 -->
+    <link name="front_right_wheel">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.5"/>  <!-- 體積增大，質量也增加 -->
+            <inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.004"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="front_right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- 右前輪關節 -->
+    <joint name="front_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="front_right_wheel"/>
+        <origin xyz="0.18 -0.2 -0.23" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+
+    <gazebo>
+        <plugin name="front_diff_drive" filename="libgazebo_ros_diff_drive.so">
+            <left_joint>front_left_wheel_joint</left_joint>
+            <right_joint>front_right_wheel_joint</right_joint>
+            <wheel_separation>0.2</wheel_separation>  <!-- 尺寸加大 -->
+            <wheel_diameter>0.2</wheel_diameter>  <!-- 尺寸加大 -->
+            <max_wheel_torque>200</max_wheel_torque>
+            <max_wheel_acceleration>10.0</max_wheel_acceleration>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_footprint</robot_base_frame>
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+        </plugin>
+    </gazebo>
+
+    <!-- 左後輪 -->
+    <link name="back_left_wheel">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.5"/>  <!-- 體積增大，質量也增加 -->
+            <inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.004"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="back_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- 左後輪關節 -->
+    <joint name="back_left_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="back_left_wheel"/>
+        <origin xyz="-0.18 0.2 -0.23" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+
+    <!-- 右後輪 -->
+    <link name="back_right_wheel">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>  <!-- 車輪位置 -->
+            <geometry>
+                <cylinder radius="0.13" length="0.11"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.5"/>  <!-- 體積增大，質量也增加 -->
+            <inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.004"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="back_right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- 右後輪關節 -->
+    <joint name="back_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="back_right_wheel"/>
+        <origin xyz="-0.18 -0.2 -0.23" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <gazebo>
+        <plugin name="back_diff_drive" filename="libgazebo_ros_diff_drive.so">
+            <left_joint>back_left_wheel_joint</left_joint>
+            <right_joint>back_right_wheel_joint</right_joint>
+            <wheel_separation>0.2</wheel_separation>  <!-- 尺寸加大 -->
+            <wheel_diameter>0.2</wheel_diameter>  <!-- 尺寸加大 -->
+            <max_wheel_torque>200</max_wheel_torque>
+            <max_wheel_acceleration>10.0</max_wheel_acceleration>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_footprint</robot_base_frame>
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+        </plugin>
+    </gazebo>
+
+    <!-- ================IMU============== -->
+    <link name="imu_link">
+        <visual>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/>
+                <geometry>
+                    <box size="0.06 0.06 0.06"/>  <!-- 尺寸加大 -->
+                </geometry>
+        </visual>
+    </link>
+    <!-- imu joint -->
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="imu_link" />
+        <origin xyz="0 0 0.06" />  <!-- 尺寸加大 -->
+    </joint>
+
+    <gazebo reference="imu_link">
+        <sensor name="imu_sensor" type="imu">
+          <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+              <ros>
+                  <namespace>/</namespace>
+                  <remapping>~/out:=imu</remapping>
+              </ros>
+              <initial_orientation_as_reference>false</initial_orientation_as_reference>
+              </plugin>
+              <always_on>true</always_on>
+              <update_rate>100</update_rate>
+              <visualize>true</visualize>
+              <imu>
+              <angular_velocity>
+                  <x>
+                  <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>2e-4</stddev>
+                      <bias_mean>0.0000075</bias_mean>
+                      <bias_stddev>0.0000008</bias_stddev>
+                  </noise>
+                  </x>
+                  <y>
+                  <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>2e-4</stddev>
+                      <bias_mean>0.0000075</bias_mean>
+                      <bias_stddev>0.0000008</bias_stddev>
+                  </noise>
+                  </y>
+                  <z>
+                  <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>2e-4</stddev>
+                      <bias_mean>0.0000075</bias_mean>
+                      <bias_stddev>0.0000008</bias_stddev>
+                  </noise>
+                  </z>
+              </angular_velocity>
+              <linear_acceleration>
+                  <x>
+                  <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>1.7e-2</stddev>
+                      <bias_mean>0.1</bias_mean>
+                      <bias_stddev>0.001</bias_stddev>
+                  </noise>
+                  </x>
+                  <y>
+                  <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>1.7e-2</stddev>
+                      <bias_mean>0.1</bias_mean>
+                      <bias_stddev>0.001</bias_stddev>
+                  </noise>
+                  </y>
+                  <z>
+                  <noise type="gaussian">
+                      <mean>0.0</mean>
+                      <stddev>1.7e-2</stddev>
+                      <bias_mean>0.1</bias_mean>
+                      <bias_stddev>0.001</bias_stddev>
+                  </noise>
+                  </z>
+              </linear_acceleration>
+              </imu>
+        </sensor>
+      </gazebo>
+
+    <!-- ==============雷達================= -->
+    <link name="laser">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.06" length="0.06"/>  <!-- 尺寸加大 -->
+            </geometry>
+            <material name="radar_material"/>
+        </visual>
+    </link>
+
+    <joint name="laser_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="laser"/>
+        <origin xyz="0.0 0.0 0.33" rpy="0 0 0"/>  <!-- 尺寸加大 -->
+    </joint>
+
+    <gazebo reference="laser">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="laser">
+      <sensor name="laser_sensor" type="ray">
+      <always_on>true</always_on>
+      <visualize>false</visualize>
+      <update_rate>5</update_rate>
+      <pose>0 0 0.12 0 0 0</pose>  <!-- 尺寸加大 -->
+      <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1.000000</resolution>
+              <min_angle>0.000000</min_angle>
+              <max_angle>6.280000</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.12</min>
+            <max>3.5</max>
+            <resolution>0.015</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+      </ray>
+      <plugin name="laserscan" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>laser</frame_name>
+      </plugin>
+      </sensor>
+    </gazebo>
+
+
+    <!-- ==============相機================= -->
+    <link name="camera">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.04 0.1 0.04"/>  <!-- 尺寸加大 -->
+            </geometry>
+            <material name="camera_material"/>
+        </visual>
+    </link>
+
+    <gazebo reference="camera">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+
+    <joint name="camera_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="camera"/>
+        <origin xyz="0.32 0.0 0.0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- camera -->
+    <gazebo reference="camera">
+        <sensor type="camera" name="camera1">
+            <update_rate>30.0</update_rate>
+            <camera name="head">
+                <horizontal_fov>1.3962634</horizontal_fov>
+                <image>
+                <width>800</width>
+                <height>800</height>
+                <format>R8G8B8</format>
+                </image>
+                <clip>
+                <near>0.02</near>
+                <far>300</far>
+                </clip>
+                <noise>
+                <type>gaussian</type>
+                <!-- Noise is sampled independently per pixel on each frame.
+                    That pixel's noise value is added to each of its color
+                    channels, which at that point lie in the range [0,1]. -->
+                <mean>0.0</mean>
+                <stddev>0.007</stddev>
+                </noise>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <cameraName>rrbot/camera1</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>camera_link</frameName>
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
+    
+</robot>

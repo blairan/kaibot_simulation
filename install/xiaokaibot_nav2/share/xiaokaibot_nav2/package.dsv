@@ -1,0 +1,6 @@
+source;share/xiaokaibot_nav2/hook/pythonpath.ps1
+source;share/xiaokaibot_nav2/hook/pythonpath.dsv
+source;share/xiaokaibot_nav2/hook/pythonpath.sh
+source;share/xiaokaibot_nav2/hook/ament_prefix_path.ps1
+source;share/xiaokaibot_nav2/hook/ament_prefix_path.dsv
+source;share/xiaokaibot_nav2/hook/ament_prefix_path.sh
